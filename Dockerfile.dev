@@ -33,7 +33,7 @@ ARG ENVFILEPATH
 COPY ${ENVFILEPATH} ./packages/venia-concept/.env
 
 # build the app
-RUN yarn run build 
+RUN echo "172.18.0.1 magento.localhost" >> /etc/hosts && yarn run build 
 
 # MULTI-STAGE BUILD
 FROM node:10.14.1-alpine

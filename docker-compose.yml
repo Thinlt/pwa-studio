@@ -46,3 +46,5 @@ services:
       VIRTUAL_PORT: ${PWA_STUDIO_PORTS_DEVELOPMENT}
     expose:
       - ${PWA_STUDIO_PORTS_DEVELOPMENT}
+    extra_hosts:
+      - "magento.localhost:172.19.0.1"
